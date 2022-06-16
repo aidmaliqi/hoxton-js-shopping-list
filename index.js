@@ -40,6 +40,7 @@ for (let newItem1 = confirm("Do you want to add another new item to the list?");
     let newPrice1 = Number(prompt('What is your products price?'))
     prices.push(newPrice1)
 }
+let totalnew = 0
 let newList = confirm("Do you want to see the new list?")
 if (newList == true) {
     products.forEach((product, i) => {
@@ -47,9 +48,9 @@ if (newList == true) {
         console.log(product, price,"$");
       })
       for(let price of prices){
-        total += price
+        totalnew += price
      }
-     console.log("The total price is:" ,  total,"$")
+     console.log("The total price is:" ,  totalnew,"$")
 }
 else{
     alert("FINISHED")
