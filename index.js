@@ -33,3 +33,24 @@ console.log("The total price is:" ,  total,"$")
 //asking you repeatedly to add items to your list.
 //The user should be able to stop adding items and then output the list to the user.
 //We can use Google in our favour here if we know the right questions to ask
+
+for (let newItem1 = confirm("Do you want to add another new item to the list?");  newItem1 == true; newItem1 = confirm("Do you want to add another new item to the list?")  ) {
+   let newProduct1 = prompt("Add a new product to the list") 
+    products.push(newProduct1)
+    let newPrice1 = Number(prompt('What is your products price?'))
+    prices.push(newPrice1)
+}
+let newList = confirm("Do you want to see the new list?")
+if (newList == true) {
+    products.forEach((product, i) => {
+        let price = prices[i];
+        console.log(product, price,"$");
+      })
+      for(let price of prices){
+        total += price
+     }
+     console.log("The total price is:" ,  total,"$")
+}
+else{
+    alert("FINISHED")
+}
